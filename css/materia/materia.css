@@ -1,0 +1,138 @@
+#body{
+    background-color: #cfd8dc;
+}
+
+.nav-extended{
+    height: 70px;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.carousel {
+    overflow: initial !important;
+}
+
+.nav-wrapper{
+    background: #263238;
+    border-bottom: 2px solid #ff5722;
+}
+
+.tabs .indicator{
+    background-color: #ff5722 !important;
+}
+
+.tabs li a{
+    color: #cfd8dc !important;
+}
+
+#nombrePag{
+    color: #29b6f6;
+    font-size: 50px;
+}
+
+.nav-wrapper{
+    background: #263238;
+    border-bottom: 2px solid #ff5722;
+}
+
+#tabs-swipe-demo{
+    background: #455a64;
+}
+
+a.waves-light{
+    background: #ff5722 !important;
+}
+
+a.waves-light:hover{
+    background: #ff8a65 !important;
+}
+
+#divTest{
+    margin-top: 100px;
+}
+
+.electivas{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: #37474f;
+}
+
+.tablaTh{
+    background-color: #009688 ;
+    color: #cfd8dc;
+}
+
+.tablaTr{
+    background-color: #80cbc4;
+}
+
+.tablaEstilo{
+    background-color: #b2dfdb;
+}
+
+table{
+    border-color: darkgrey;
+}
+
+#infoPI{
+    color: #263238;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+button.waves-light{
+    background: #ff5722 !important;
+}
+
+button.waves-light:hover{
+    background: #ff8a65 !important;
+}
+
+.input-field textarea:focus + label, input[type=password]:focus + label {
+    color: #29b6f6 !important;
+}
+
+.input-field textarea:focus, input[type=password]:focus {
+    border-bottom: 1px solid #29b6f6 !important;
+    box-shadow: 0 1px 0 0 #29b6f6 !important;
+}
+
+.input-field .prefix.active {
+    color: #29b6f6 !important;
+}
+
+.margen{
+    margin-left: 200px !important;
+    margin-right: 200px !important;
+}
+
+.publicar{
+    margin-left: 1000px !important;
+    margin-top: -100px !important;
+    background-color: #29b6f6 !important;
+    color: #263238 !important;
+}
+
+.margen2{
+    margin-left: 300px !important;
+    width: 1500px !important;
+}
+
+.colorLetra{
+    color: #ff8a65 !important;
+}
+
+.subirArchivo{
+    margin-left: 950px !important;
+    background-color: #29b6f6 !important;
+    color: #263238 !important;
+}
+
+#archivos{
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+}

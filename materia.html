@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="js/servicios/materia.servicio.js"></script>
+        <script src="js/servicios/malla.servicio.js"></script>
+        <script src="js/dominio/Materia.js"></script>
+        <script src="js/dominio/Materia.js"></script>
+        <script src="js/dominio/LineaMalla.js"></script>
+        <script src="js/paginas/malla/malla.js"></script>
+        <script src="js/dominio/Malla.js"></script>
+        <link rel="stylesheet" href="css/materia/materia.css">
+        <script src="js/paginas/Materia/materia.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <script src="js/helpers/jquery-3.3.1.min.js"></script>
+        <script src="js/helpers/URI.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    </head>
+    <body id="body">
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo" id="nombrePag"><b>EL BAILE DE TURING</b></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a onclick="cerrarSesion()" class="waves-effect waves-light btn">Cerrar sesión</a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul id="tabs-swipe-demo" class="tabs">
+                    <li class="tab col s3"><a href="#test-swipe-1"><b>Información sobre la materia</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-2"><b>Publicaciones del profesor</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-3"><b>Publicaciones de alumnos</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-4"><b>Subir/Descargar archivos</b></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="divTest">
+            <div id="test-swipe-1" class="col s12 blue-grey lighten-4">
+                <div>
+                    <h2 class="electivas tituloMateria" style="text-align:center;"></h2>
+                </div>
+                <div id="infoPI" style="text-align:center;">
+                        <table style="width:100%">
+                            <tr class="tablaTr">
+                                <th class="tablaTh">Información básica de la materia:</th>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</td>
+                            </tr>
+                            <tr class="tablaTr">
+                                <th class="tablaTh">Número de créditos:</th>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</td>
+                            </tr>
+                            <tr class="tablaTr">
+                                <th class="tablaTh">Objetivo general:</th>
+                                <td class="tablaEstilo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</td>
+                            </tr>
+                            <tr class="tablaTr">
+                                <th class="tablaTh">Objetivos específicos:</th>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</td>
+                            </tr>
+                            <tr class="tablaTr">
+                                <th class="tablaTh">Prerrequisitos:</th>
+                                <td class="tablaEstilo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</td>
+                            </tr>
+                            <tr class="tablaTr">
+                                <th class="tablaTh">correquisitos:</th>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</td>
+                            </tr>
+                            <tr class="tablaTr">
+                                <th class="tablaTh">Contenido de la materia:</th>
+                                <td class="tablaEstilo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</td>
+                            </tr>
+                        </table>
+                    </div>
+                
+            </div>
+            <div id="test-swipe-2" class="col s12 blue-grey lighten-4">
+                <div>
+                    <h2 class="electivas tituloMateria" style="text-align:center;"></h2>
+                </div>
+                <div class="row margen">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">chat</i>
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Escribe algo:</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <a class="waves-effect btn publicar"><i class="material-icons right">send</i>publicar</a>
+                </div>
+                <hr>
+                <div class="row margen2">
+                    <div class="col s12 m6">
+                        <div class="card blue-grey darken-2">
+                        <div class="card-content white-text">
+                            <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="colorLetra">Comentar</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row margen2">
+                    <div class="col s12 m6">
+                        <div class="card blue-grey darken-2">
+                        <div class="card-content white-text">
+                            <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="colorLetra">Comentar</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="test-swipe-3" class="col s12 blue-grey lighten-4">
+                <div>
+                    <h2 class="electivas tituloMateria" style="text-align:center;"></h2>
+                </div>
+                <div class="row margen">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">chat</i>
+                                <textarea id="textarea2" class="materialize-textarea"></textarea>
+                                <label for="textarea2">Escribe algo:</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <a class="waves-effect btn publicar"><i class="material-icons right">send</i>publicar</a>
+                </div>
+                <hr>
+                <div class="row margen2">
+                    <div class="col s12 m6">
+                        <div class="card blue-grey darken-2">
+                        <div class="card-content white-text">
+                            <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="colorLetra">Comentar</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row margen2">
+                    <div class="col s12 m6">
+                        <div class="card blue-grey darken-2">
+                        <div class="card-content white-text">
+                            <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="colorLetra">Comentar</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="test-swipe-4" class="col s12 blue-grey lighten-4">
+                <div>
+                    <h2 class="electivas tituloMateria" style="text-align:center;"></h2>
+                </div>
+                <div>
+                    <a class="waves-effect btn subirArchivo"><i class="material-icons right">send</i>Subir archivo</a>
+                </div>
+                <div id ="archivos" class="collection">
+                    <a href="#!" class="collection-item"><span class="badge">Descargar</span>Subido por Yaqueline Hoyos</a>
+                    <a href="#!" class="collection-item"><span class="badge">Descargar</span>Subido por Víctor Cardona</a>
+                    <a href="#!" class="collection-item"><span class="badge">Descargar</span>Subido por Yenny Tombé</a>
+                    <a href="#!" class="collection-item"><span class="badge">Descargar</span>Subido por Melissa Gómez</a>
+                    <a href="#!" class="collection-item"><span class="badge">Descargar</span>Subido por Estefanía Londoño</a>
+                    <a href="#!" class="collection-item"><span class="badge">Descargar</span>Subido por Juan Diego Bedoya</a>
+                    <a href="#!" class="collection-item"><span class="badge">Descargar</span>Subido por Alejandra Martinez</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

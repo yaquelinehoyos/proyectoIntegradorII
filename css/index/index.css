@@ -1,0 +1,84 @@
+#titulo{
+    font-size: 70px;
+    color: #29b6f6;
+    text-align: center;
+    background: #263238;
+    height: 100px;
+    margin-top: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 7px solid #ff5722;
+}
+
+#validar{
+    width: 500px;
+    background: #F2F2F2;
+    height: 480px;
+    margin-left: 100px;
+    float: left;
+    position: relative;
+    border-width:2px;
+    border-style:solid;
+    border-color:#263238;
+    box-shadow: 10px 10px #90a4ae;
+
+}
+
+#body{
+    background: #cfd8dc ;
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+    color: #263238;
+}
+
+#imagen{
+    padding-top: 10px;
+    float: right;
+    position: relative;
+    margin-right: 70px;
+}
+
+#universidad{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 1px 2px 5px #90a4ae;
+}
+
+#tituloValidar{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #29b6f6;
+    margin-top: auto;
+    height: 100px;
+    text-shadow: 1px 2px 5px #90a4ae;
+}
+
+
+button.waves-light{
+    background: #ff5722 !important;
+}
+
+button.waves-light:hover{
+    background: #ff8a65 !important;
+}
+
+.input-field input[type=text]:focus + label, input[type=password]:focus + label {
+    color: #29b6f6 !important;
+}
+
+.input-field input[type=text]:focus, input[type=password]:focus {
+border-bottom: 1px solid #29b6f6 !important;
+box-shadow: 0 1px 0 0 #29b6f6 !important;
+}
+
+.input-field .prefix.active {
+color: #29b6f6 !important;
+}
+
+.toast-personalizado{
+    background: #b71c1c !important;
+    margin-top: 490px !important;
+    margin-right: 500px !important;
+}

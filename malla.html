@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="css/malla/malla.css">
+        <script src="js/dominio/Login.js"></script>
+        <script src="js/servicios/usuario.servicio.js"></script>
+        <script src="js/helpers/Rectangulo.js"></script>
+        <script src="js/servicios/materia.servicio.js"></script>
+        <script src="js/servicios/malla.servicio.js"></script>
+        <script src="js/dominio/Materia.js"></script>
+        <script src="js/dominio/Materia.js"></script>
+        <script src="js/dominio/LineaMalla.js"></script>
+        <script src="js/dominio/Malla.js"></script>
+        <script src="js/paginas/malla/malla.js"></script>
+        <script src="js/paginas/malla/lienzoMalla.js"></script>
+        <script src="js/paginas/malla/tooltipMateria.js"></script>
+        <script src="js/helpers/jquery-3.3.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    </head>
+    <body id="body">
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo" id="nombrePag"><b>EL BAILE DE TURING</b></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a onclick="cerrarSesion();" class="waves-effect waves-light btn">Cerrar sesión</a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul id="tabs-swipe-demo" class="tabs">
+                    <li class="tab col s3"><a href="#test-swipe-1"><b>Obligatorias</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-2"><b>Integradores</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-3"><b>Socio-humanísticas</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-4"><b>Ciencias básicas</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-5"><b>Ing. software</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-6"><b>Algoritmia</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-7"><b>Arqu. de computadores</b></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-8"><b>Práctica</b></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="divTest">
+            <div id="test-swipe-1" class="col s12 blue-grey lighten-4">
+                <h2 class="electivas" style="text-align:center;"><b>MATERIAS OBLIGATORIAS</b></h2>
+                <div id = "contenedorLinea"></div>
+                <hr>
+                <canvas id="canvasMalla"></canvas>
+            </div>
+            <div id="test-swipe-2" class="col s12 blue-grey lighten-4">
+                <div>
+                    <h2 class="electivas" style="text-align:center;"><b>PROYECTOS INTEGRADORES</b></h2>
+                </div>
+                <div id="infoPI" style="text-align:center;">
+                    <table style="width:100%">
+                        <tr class="tablaTr">
+                            <th class="tablaTh">Áreas:</th>
+                            <td>Debe integrar por lo menos dos de las siguientes áreas profesionales:
+                                <li class="materiasAIntegrar">Algoritmia y programación</li>
+                                <li class="materiasAIntegrar">Matemáticas discretas</li>
+                                <li class="materiasAIntegrar">Ciencia computacional</li>
+                                <li class="materiasAIntegrar">Arquitectura de máquinas y sistemas operativos</li>
+                                <li class="materiasAIntegrar">Comunicación de datos</li>
+                                <li class="materiasAIntegrar">Ingeniería de software</li>
+                                <li class="materiasAIntegrar">Sistemas de información</li>
+                                <li class="materiasAIntegrar">Administración de información</li>
+                                <li class="materiasAIntegrar">Elementos sociales y profesionales</li>
+                            </td>
+                        </tr>
+                        <tr class="tablaTr">
+                            <th class="tablaTh">Requisitos:</th>
+                            <td class="tablaEstilo">100 créditos aprobados en el programa</td>
+                        </tr>
+                        <tr class="tablaTr">
+                            <th class="tablaTh">Horas prácticas semanales:</th>
+                            <td>3 (2 de ellas con acompañamiento directo del docente)</td>
+                        </tr>
+                        <tr class="tablaTr">
+                            <th class="tablaTh">Tipo de curso:</th>
+                            <td class="tablaEstilo">Práctico</td>
+                        </tr>
+                        <tr class="tablaTr">
+                            <th class="tablaTh">Propósito del curso:</th>
+                            <td>Mediante el paso del estudiante por este curso se pretende que él:
+                                <ol type="a">
+                                    <li class="materiasAIntegrar">Se aproxime al concepto de <b>proyecto en ingeniería</b></li>
+                                    <li class="materiasAIntegrar">Materialice la <b>integración</b> de competencias de diferentes áreas académicas</li>
+                                    <li class="materiasAIntegrar">Conforme un <b>equipo de trabajo</b></li>
+                                    <li class="materiasAIntegrar">Mejore su actitud y motivación al proceso de adquisición de conocimiento</li>
+                                    <li class="materiasAIntegrar">Incremente sus competencias comunicativas</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr class="tablaTr">
+                            <th class="tablaTh">Objetivo:</th>
+                            <td class="tablaEstilo"><p align="justify">Desarrollar un proyecto básico de ingeniería en el que un equipo de estudiantes y docentes
+                                identifiquen y apliquen conocimientos y prácticas de al menos dos áreas académicas del 
+                                currículo de ingeniería de sistemas a la solución de un problema, aplicado o abstracto,
+                                que requiera la intervención y preparación en el objeto propio de la carrera.</p>
+                            </td>
+                        </tr>
+                        <tr class="tablaTr">
+                            <th class="tablaTh">Metodología:</th>
+                            <td><p align="justify">Este curso tiene una naturaleza práctica e interdisciplinar que requiere fundamentación
+                                teórica en algunas áreas académicas del programa, y el despliegue de habilidades exploratorias
+                                de indagación, adquisición y uso de datos, información y conocimiento, de trabajo en equipo
+                                y de cominicación. <br>El curso se desarrolla con una estrategia didáctica activa, centrada en el estudiante,
+                                en el que se ejerce el respeto por el otro, la confrontación de ideas y el apoyo mutuo, impulsando valores
+                                formativos en los estudiantes tales como el trabajo en equipo, la valoración comparativa y el acercamiento 
+                                al trabajo en un entorno por fuera de la academia.</p>
+                                <br>La estrategia didáctica básica consta de los siguientes aspectos:
+                                <li class="materiasAIntegrar">Reuniones semanales entre estudiantes y tutor del proyecto (y otros docentes si los hay)
+                                    para la formulación de objetivos, planteamineto y asignación de tareas y presentación de informes de avance.
+                                </li>
+                                <li class="materiasAIntegrar">
+                                    Reuniones de trabajo entre los estudiantes para compartir la evolución del proyecto y asignación 
+                                    interna de tareas.
+                                </li>
+                                <li class="materiasAIntegrar">
+                                    Exploración continua de fuentes de información a través de las bases de datos bobliográficas de
+                                    la universidad, internet, docentes adscritos al departamento u otras instancias académicas para
+                                    la fundamentación de la solución.
+                                </li>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="test-swipe-3" class="col s12 blue-grey lighten-4" style="text-align:center;">
+                <h2 class="electivas" style="text-align:center;"><b>ELECTIVAS SOCIO-HUMANÍSTICAS</b></h2>
+                <canvas id="canvasSocioH"></canvas>
+            </div>
+            <div id="test-swipe-4" class="col s12 blue-grey lighten-4" style="text-align:center;">
+                
+                <h2 class="electivas" style="text-align:center;"><b>CURSOS ALTERNATIVOS CIENCIAS BÁSICAS</b></h2>
+                <canvas id="canvasCienciasB"></canvas>
+            </div>
+            <div id="test-swipe-5" class="col s12 blue-grey lighten-4" style="text-align:center;">
+                <h2 class="electivas" style="text-align:center;"><b>LÍNEA DE ÉNFASIS INGENIERÍA DE SOFTWARE, SISTEMAS DE INFORMACIÓN Y <br>ADMINISTRACIÓN DE LA INFORMACIÓN</b></h2>
+                <canvas id="canvasIngSoftware"></canvas>
+            </div>
+            <div id="test-swipe-6" class="col s12 blue-grey lighten-4" style="text-align:center;">
+                <h2 class="electivas" style="text-align:center;"><b>LÍNEA DE ÉNFASIS ALGORITMIA Y PROGRAMACIÓN, <br>MATEMÁTICAS DISCRETAS Y CIENCIA COMPUTACIONAL</b></h2>
+                <canvas id="canvasAlgoritmia"></canvas>
+            </div>
+            <div id="test-swipe-7" class="col s12 blue-grey lighten-4" style="text-align:center;">
+                <h2 class="electivas" style="text-align:center;"><b>LÍNEA DE ÉNFASIS ARQUITECTURA DE COMPUTADORES <br>Y COMUNICACIÓN DE DATOS</b></h2>
+                <canvas id="canvasArqComputadores"></canvas>
+            </div>
+            <div id="test-swipe-8" class="col s12 blue-grey lighten-4" style="text-align:center;">
+                <h2 class="electivas" style="text-align:center;"><b>PRÁCTICA ACADÉMICA</h2>
+                <canvas id="canvasPractica"></canvas>
+            </div>
+        </div>
+    </body>
+</html>
